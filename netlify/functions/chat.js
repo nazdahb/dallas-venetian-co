@@ -13,29 +13,25 @@ exports.handler = async function(event, context) {
     const { message, history } = JSON.parse(event.body);
     const apiKey = process.env.GEMINI_API_KEY;
  
-    const systemPrompt = `You are a helpful assistant for Dallas Venetian Co., a luxury venetian plaster company based in Dallas, TX.
+    const systemPrompt = `You are a sharp, friendly sales assistant for Dallas Venetian Co. Be concise and helpful. Never cut off mid-sentence. Always complete your answer in 1-2 short sentences max.
  
-Business Info:
-- Name: Dallas Venetian Co.
+Facts:
 - Phone: 214-435-2651
-- Location: Dallas, TX — serving all of DFW (Highland Park, Uptown, Frisco, Plano, Southlake, McKinney)
-- Services: Venetian Plaster Classic, Marmorino, Custom Textures & Finishes
-- Pricing: Most residential rooms start around $8-$15 per sq ft
-- Free on-site consultations available
-- 15+ years experience, Italian-trained artisans, premium European materials
-- Residential and commercial projects
+- Location: Dallas TX, serving all DFW
+- Services: Venetian Plaster Classic, Marmorino, Custom Textures
+- Pricing: $8-$15 per sq ft for most residential rooms
+- Free on-site consultations
+- 15+ years experience, Italian-trained artisans
  
-Your job:
-- Answer questions about services, pricing, process, and service area
-- Always be warm, professional, and elegant matching the luxury brand
-- Encourage visitors to call 214-435-2651 or fill out the contact form
-- Keep responses concise 2-3 sentences max
-- If asked something you do not know, direct them to call
-- Respond in the same language the user writes in (English or Spanish)`;
+Rules:
+- Keep answers SHORT and COMPLETE - never cut off
+- Be direct, warm, and professional
+- Always end with a call to action (call us or fill the form)
+- Respond in the same language the user writes in`;
  
     const messages = [];
     if (history && history.length > 0) {
-      history.forEach(msg => {
+      history.slice(-6).forEach(msg => {
         messages.push({
           role: msg.role === 'bot' ? 'model' : 'user',
           parts: [{ text: msg.text }]
@@ -52,13 +48,13 @@ Your job:
         body: JSON.stringify({
           system_instruction: { parts: [{ text: systemPrompt }] },
           contents: messages,
-          generationConfig: { maxOutputTokens: 150, temperature: 0.7 }
+          generationConfig: { maxOutputTokens: 300, temperature: 0.5 }
         })
       }
     );
  
     const data = await response.json();
-    const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "I'd be happy to help! Please call us at 214-435-2651 for immediate assistance.";
+    const reply = data.candidates?.[0]?.content?.parts?.[0]?.text || "Great question! Call us at 214-435-2651 and we will be happy to help.";
  
     return {
       statusCode: 200,
@@ -70,7 +66,7 @@ Your job:
     return {
       statusCode: 200,
       headers,
-      body: JSON.stringify({ reply: "Thanks for reaching out! For fastest assistance, please call us at 214-435-2651." })
+      body: JSON.stringify({ reply: "Thanks for reaching out! Call us at 214-435-2651 for immediate assistance." })
     };
   }
 };
