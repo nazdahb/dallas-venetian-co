@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dallas Venetian Co. — Luxury Venetian Plaster</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C9A84C;--gold-light:#E8C96A;--gold-dim:#8B6F2E;--black:#0A0A08;--dark:#111109;--dark2:#1A1A16;--dark3:#222218;--white:#F5F0E8;--white-dim:#B8B0A0;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Montserrat',sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:var(--sans);font-weight:300;overflow-x:hidden}
+::-webkit-scrollbar{width:3px}::-webkit-scrollbar-track{background:var(--black)}::-webkit-scrollbar-thumb{background:var(--gold-dim)}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:24px 60px;transition:all 0.4s;background:linear-gradient(to bottom,rgba(10,10,8,0.9),transparent)}
+nav.scrolled{background:rgba(10,10,8,0.97);padding:16px 60px;border-bottom:1px solid rgba(201,168,76,0.15)}
+.nav-logo{font-family:var(--serif);font-size:20px;font-weight:300;letter-spacing:3px;color:var(--gold);text-transform:uppercase;text-decoration:none}
+.nav-logo span{color:var(--white)}
+.nav-links{display:flex;gap:36px;list-style:none}
+.nav-links a{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--white-dim);text-decoration:none;transition:color 0.3s}
+.nav-links a:hover{color:var(--gold)}
+.nav-call{display:flex;align-items:center;gap:8px;background:var(--gold);color:var(--black);text-decoration:none;padding:11px 22px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;transition:background 0.3s}
+.nav-call:hover{background:var(--gold-light)}
+.hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1800&q=85') center/cover no-repeat;animation:hzoom 14s ease-out forwards}
+@keyframes hzoom{from{transform:scale(1.08)}to{transform:scale(1.0)}}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(110deg,rgba(10,10,8,0.92) 0%,rgba(10,10,8,0.6) 55%,rgba(10,10,8,0.25) 100%)}
+.hero-content{position:relative;z-index:2;padding:0 60px;max-width:800px;animation:hfade 1.4s ease-out 0.3s both}
+@keyframes hfade{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
+.eyebrow{font-size:10px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:'';display:block;width:40px;height:1px;background:var(--gold)}
+.hero h1{font-family:var(--serif);font-size:clamp(54px,8vw,96px);font-weight:300;line-height:1.02;color:var(--white)}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--white-dim);margin:28px 0 44px;font-weight:400}
+.hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn-gold{background:var(--gold);color:var(--black);text-decoration:none;padding:16px 34px;font-size:11px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;transition:all 0.3s;display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-family:var(--sans)}
+.btn-gold:hover{background:var(--gold-light)}
+.btn-ghost{border:1px solid rgba(255,255,255,0.3);color:var(--white);text-decoration:none;padding:16px 34px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;transition:all 0.3s;display:inline-flex;align-items:center}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+.hero-scroll{position:absolute;bottom:36px;left:60px;display:flex;align-items:center;gap:12px;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--white-dim);animation:hfade 1s ease-out 1.4s both}
+.scroll-bar{width:1px;height:52px;background:linear-gradient(to bottom,var(--gold),transparent);animation:sbar 2s ease-in-out infinite}
+@keyframes sbar{0%,100%{opacity:1}50%{opacity:0.3}}
+section{padding:110px 60px}
+.stag{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:12px}
+.stag::before{content:'';display:block;width:30px;height:1px;background:var(--gold)}
+h2.stitle{font-family:var(--serif);font-size:clamp(34px,4vw,58px);font-weight:300;line-height:1.08;color:var(--white);margin-bottom:18px}
+h2.stitle em{font-style:italic;color:var(--gold)}
+p.sdesc{font-size:13px;line-height:1.9;color:var(--white-dim);max-width:480px}
+.services{background:var(--dark)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:64px}
+.svc-card{background:var(--dark2);padding:48px 40px;position:relative;overflow:hidden;transition:background 0.4s}
+.svc-card::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);transition:width 0.5s}
+.svc-card:hover::after{width:100%}
+.svc-card:hover{background:var(--dark3)}
+.svc-num{font-family:var(--serif);font-size:80px;font-weight:300;color:rgba(201,168,76,0.07);position:absolute;top:10px;right:24px;line-height:1}
+.svc-icon{width:46px;height:46px;border:1px solid var(--gold-dim);display:flex;align-items:center;justify-content:center;margin-bottom:26px}
+.svc-icon svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.3}
+.svc-name{font-family:var(--serif);font-size:26px;font-weight:300;color:var(--white);margin-bottom:14px}
+.svc-desc{font-size:13px;line-height:1.8;color:var(--white-dim)}
+.gallery{background:var(--black);padding:110px 0}
+.gal-header{padding:0 60px;display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:50px;flex-wrap:wrap;gap:24px}
+.gal-filters{display:flex;gap:6px}
+.fbtn{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--white-dim);background:none;border:1px solid rgba(255,255,255,0.1);padding:10px 20px;cursor:pointer;transition:all 0.3s;font-family:var(--sans)}
+.fbtn:hover,.fbtn.active{color:var(--gold);border-color:var(--gold)}
+.gal-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:260px;gap:4px;padding:0 4px}
+.gi{overflow:hidden;position:relative;cursor:pointer;background:var(--dark3)}
+.gi:nth-child(1){grid-column:span 5;grid-row:span 2}
+.gi:nth-child(2){grid-column:span 4}
+.gi:nth-child(3){grid-column:span 3}
+.gi:nth-child(4){grid-column:span 3}
+.gi:nth-child(5){grid-column:span 4}
+.gi img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s ease,filter 0.5s;filter:brightness(0.85)}
+.gi:hover img{transform:scale(1.07);filter:brightness(0.6)}
+.gi-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.75) 0%,transparent 55%);opacity:0;transition:opacity 0.4s;display:flex;align-items:flex-end;padding:22px}
+.gi:hover .gi-overlay{opacity:1}
+.gi-label{font-family:var(--serif);font-size:17px;font-weight:300;color:var(--white)}
+.numbar{background:var(--gold);padding:72px 60px}
+.num-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:center}
+.num-val{font-family:var(--serif);font-size:clamp(48px,5vw,72px);font-weight:300;color:var(--black);line-height:1;margin-bottom:10px}
+.num-lbl{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(10,10,8,0.55);font-weight:500}
+.process{background:var(--dark)}
+.proc-steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:80px;position:relative}
+.proc-steps::before{content:'';position:absolute;top:27px;left:12%;right:12%;height:1px;background:linear-gradient(to right,transparent,var(--gold-dim),var(--gold-dim),transparent)}
+.proc-step{padding:0 28px;text-align:center}
+.pdot{width:54px;height:54px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;background:var(--dark);font-family:var(--serif);font-size:20px;color:var(--gold);position:relative;z-index:1}
+.ptitle{font-family:var(--serif);font-size:22px;font-weight:300;color:var(--white);margin-bottom:12px}
+.pdesc{font-size:12px;line-height:1.85;color:var(--white-dim)}
+.testimonials{background:var(--black)}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:64px}
+.tcard{background:var(--dark2);padding:44px 36px;position:relative}
+.qmark{font-family:var(--serif);font-size:90px;color:rgba(201,168,76,0.1);position:absolute;top:6px;left:24px;line-height:1;font-weight:300}
+.ttext{font-family:var(--serif);font-size:17px;font-weight:300;font-style:italic;line-height:1.75;color:var(--white);margin-bottom:28px;position:relative;z-index:1;padding-top:28px}
+.tauthor{display:flex;align-items:center;gap:12px}
+.tavatar{width:38px;height:38px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:var(--black);flex-shrink:0}
+.tname{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--white);margin-bottom:4px}
+.tproject{font-size:11px;color:var(--gold-dim);letter-spacing:0.8px}
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr}
+.cleft{padding:110px 72px;background:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&q=85') center/cover no-repeat;position:relative}
+.cleft::before{content:'';position:absolute;inset:0;background:rgba(10,10,8,0.78)}
+.cleft-inner{position:relative;z-index:1}
+.cphone{font-family:var(--serif);font-size:clamp(26px,3vw,40px);font-weight:300;color:var(--gold);margin:28px 0 16px;letter-spacing:1px;text-decoration:none;display:block;transition:color 0.3s}
+.cphone:hover{color:var(--gold-light)}
+.cdet{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--white-dim);margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.cdet::before{content:'';width:18px;height:1px;background:var(--gold-dim)}
+.cright{padding:110px 72px;background:var(--dark3)}
+.cform{display:flex;flex-direction:column;gap:18px;margin-top:36px}
+.fgroup{display:flex;flex-direction:column;gap:7px}
+.fgroup label{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold-dim);font-weight:400}
+.fgroup input,.fgroup select,.fgroup textarea{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);color:var(--white);padding:13px 16px;font-family:var(--sans);font-size:13px;font-weight:300;outline:none;transition:border-color 0.3s;-webkit-appearance:none}
+.fgroup input:focus,.fgroup select:focus,.fgroup textarea:focus{border-color:var(--gold-dim)}
+.fgroup select option{background:var(--dark3);color:var(--white)}
+.fgroup textarea{resize:none;height:110px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.btn-submit{background:var(--gold);color:var(--black);border:none;padding:16px 36px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-family:var(--sans);font-weight:600;cursor:pointer;transition:background 0.3s;align-self:flex-start;margin-top:6px}
+.btn-submit:hover{background:var(--gold-light)}
+footer{background:var(--black);padding:56px 60px 36px;border-top:1px solid rgba(201,168,76,0.12)}
+.ft{display:flex;justify-content:space-between;align-items:center;margin-bottom:44px;flex-wrap:wrap;gap:24px}
+.flogo{font-family:var(--serif);font-size:22px;font-weight:300;letter-spacing:3px;text-transform:uppercase;color:var(--gold)}
+.flogo span{color:var(--white)}
+.ftag{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--white-dim)}
+.fnav{display:flex;gap:32px;list-style:none}
+.fnav a{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--white-dim);text-decoration:none;transition:color 0.3s}
+.fnav a:hover{color:var(--gold)}
+.fb{display:flex;justify-content:space-between;align-items:center;padding-top:26px;border-top:1px solid rgba(255,255,255,0.05);flex-wrap:wrap;gap:10px}
+.fcopy,.fsvc{font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:0.8px}
+.mobile-sticky{display:none;position:fixed;bottom:0;left:0;right:0;z-index:300;background:rgba(10,10,8,0.97);border-top:1px solid rgba(201,168,76,0.2);padding:12px 16px;gap:10px}
+.msb-call{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--gold);color:var(--black);text-decoration:none;padding:14px;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase}
+.msb-wa{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:#25D366;color:#fff;text-decoration:none;padding:14px;font-size:12px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase}
+.chat-bubble{position:fixed;bottom:80px;right:24px;z-index:250;background:var(--gold);width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 20px rgba(201,168,76,0.4);transition:transform 0.3s}
+.chat-bubble:hover{transform:scale(1.08)}
+.chat-dot{position:absolute;top:2px;right:2px;width:12px;height:12px;background:#22c55e;border-radius:50%;border:2px solid var(--black)}
+.chat-window{position:fixed;bottom:148px;right:24px;z-index:250;width:340px;background:var(--dark2);border:1px solid rgba(201,168,76,0.2);border-radius:12px;overflow:hidden;display:none;flex-direction:column;box-shadow:0 20px 60px rgba(0,0,0,0.6)}
+.chat-window.open{display:flex;animation:chatIn 0.3s ease-out}
+@keyframes chatIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.chat-head{background:var(--dark3);padding:14px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(201,168,76,0.12)}
+.chat-avatar{width:36px;height:36px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:16px;font-weight:600;color:var(--black);flex-shrink:0}
+.chat-title{font-size:13px;font-weight:600;color:var(--white)}
+.chat-status{font-size:11px;color:#22c55e;display:flex;align-items:center;gap:5px}
+.chat-status::before{content:'';width:6px;height:6px;background:#22c55e;border-radius:50%;display:inline-block}
+.chat-close{margin-left:auto;background:none;border:none;color:var(--white-dim);cursor:pointer;font-size:18px;padding:2px 6px}
+.chat-msgs{overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;max-height:280px;scroll-behavior:smooth}
+.chat-msgs::-webkit-scrollbar{width:2px}
+.cmsg{max-width:88%;padding:10px 14px;border-radius:10px;font-size:13px;line-height:1.6}
+.cmsg.bot{background:var(--dark3);color:var(--white);align-self:flex-start;border-bottom-left-radius:2px}
+.cmsg.user{background:var(--gold);color:var(--black);align-self:flex-end;border-bottom-right-radius:2px;font-weight:500}
+.cmsg.typing{display:flex;gap:4px;align-items:center;padding:12px 16px}
+.typing-dot{width:6px;height:6px;background:var(--white-dim);border-radius:50%;animation:tdot 1.2s ease-in-out infinite}
+.typing-dot:nth-child(2){animation-delay:0.2s}.typing-dot:nth-child(3){animation-delay:0.4s}
+@keyframes tdot{0%,80%,100%{transform:scale(0.6);opacity:0.4}40%{transform:scale(1);opacity:1}}
+.chat-quick{padding:10px 12px;display:flex;flex-wrap:wrap;gap:6px;border-top:1px solid rgba(255,255,255,0.06)}
+.qbtn{background:none;border:1px solid rgba(201,168,76,0.35);color:var(--gold);padding:6px 12px;font-size:11px;font-family:var(--sans);font-weight:500;cursor:pointer;border-radius:20px;transition:all 0.2s;white-space:nowrap}
+.qbtn:hover{background:var(--gold);color:var(--black)}
+.chat-input-row{padding:10px 12px;border-top:1px solid rgba(255,255,255,0.06);display:flex;gap:8px}
+.chat-input{flex:1;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);color:var(--white);padding:9px 14px;font-family:var(--sans);font-size:12px;border-radius:20px;outline:none}
+.chat-input::placeholder{color:var(--white-dim)}
+.chat-send{background:var(--gold);border:none;width:34px;height:34px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.2s}
+.chat-send:hover{background:var(--gold-light)}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity 0.8s ease,transform 0.8s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.rd1{transition-delay:0.1s}.rd2{transition-delay:0.2s}.rd3{transition-delay:0.3s}
+@media(min-width:901px){.chat-bubble{bottom:32px}.chat-window{bottom:100px}}
+@media(max-width:900px){
+nav{padding:18px 20px}nav.scrolled{padding:12px 20px}.nav-links{display:none}.nav-call{padding:10px 16px;font-size:10px}
+section{padding:80px 20px}.hero-content{padding:0 20px}.hero-scroll{left:20px}
+.svc-grid{grid-template-columns:1fr}
+.gallery{padding:80px 0}.gal-header{padding:0 20px}
+.gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:190px;padding:0 3px;gap:3px}
+.gi{grid-column:span 1 !important;grid-row:span 1 !important}
+.numbar{padding:56px 20px}.num-grid{grid-template-columns:repeat(2,1fr);gap:32px}
+.proc-steps{grid-template-columns:1fr 1fr;row-gap:48px}.proc-steps::before{display:none}
+.tgrid{grid-template-columns:1fr}
+.contact-wrap{grid-template-columns:1fr}.cleft{padding:72px 20px;min-height:300px}.cright{padding:72px 20px}.frow{grid-template-columns:1fr}
+footer{padding:50px 20px 110px}.ft{flex-direction:column;align-items:flex-start}.fb{flex-direction:column}.fnav{flex-wrap:wrap;gap:18px}
+.mobile-sticky{display:flex}
+.chat-bubble{bottom:90px;right:14px}.chat-window{bottom:162px;right:10px;left:10px;width:auto}
+}
+</style>
+</head>
+<body>
+
+<nav id="navbar">
+  <a href="#" class="nav-logo">Dallas Venetian <span>Co.</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="tel:2144352651" class="nav-call">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="var(--black)"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    Call Now
+  </a>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="eyebrow">Luxury Artisan Plaster &nbsp;&middot;&nbsp; Dallas, TX</div>
+    <h1>Where Walls<br>Become <em>Art</em></h1>
+    <p class="hero-sub">Venetian Plaster &nbsp;&middot;&nbsp; Marmorino &nbsp;&middot;&nbsp; Custom Finishes</p>
+    <div class="hero-btns">
+      <a href="tel:2144352651" class="btn-gold">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--black)"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        Call Us Now
+      </a>
+      <a href="#gallery" class="btn-ghost">See Our Work</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><div class="scroll-bar"></div>Scroll</div>
+</section>
+
+<section class="services" id="services">
+  <div class="stag reveal">What We Do</div>
+  <h2 class="stitle reveal">Crafted for the<br><em>Discerning Eye</em></h2>
+  <p class="sdesc reveal">Centuries-old Italian techniques. Premium European materials. Every surface we touch becomes a one-of-a-kind statement.</p>
+  <div class="svc-grid">
+    <div class="svc-card reveal">
+      <div class="svc-num">01</div>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><path d="M3 21L12 3l9 18"/><path d="M7 14h10"/></svg></div>
+      <h3 class="svc-name">Venetian Plaster Classic</h3>
+      <p class="svc-desc">The original Italian wall art. Layers of pure lime plaster burnished to a deep, lustrous polish that mimics the finest marble &mdash; timeless, breathable, built to last centuries.</p>
+    </div>
+    <div class="svc-card reveal rd1">
+      <div class="svc-num">02</div>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3Q18 12 12 21"/><path d="M12 3Q6 12 12 21"/></svg></div>
+      <h3 class="svc-name">Marmorino</h3>
+      <p class="svc-desc">Ground marble aggregate creates an incredibly smooth finish with extraordinary depth. The preferred choice for luxury residences, hotels, and high-end commercial spaces.</p>
+    </div>
+    <div class="svc-card reveal rd2">
+      <div class="svc-num">03</div>
+      <div class="svc-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/></svg></div>
+      <h3 class="svc-name">Custom Textures</h3>
+      <p class="svc-desc">From raw concrete-effect to silk-smooth Stucco Veneziano &mdash; our artisans replicate any texture, finish, or color palette. Fully custom, fully unique to your vision.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="gal-header">
+    <div>
+      <div class="stag reveal">Our Work</div>
+      <h2 class="stitle reveal">Every Wall,<br><em>A Masterpiece</em></h2>
+    </div>
+    <div class="gal-filters reveal">
+      <button class="fbtn active" onclick="filterGal('all',this)">All</button>
+      <button class="fbtn" onclick="filterGal('residential',this)">Residential</button>
+      <button class="fbtn" onclick="filterGal('commercial',this)">Commercial</button>
+    </div>
+  </div>
+  <div class="gal-grid">
+    <div class="gi" data-cat="residential">
+      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" alt="Venetian plaster living room" loading="lazy">
+      <div class="gi-overlay"><span class="gi-label">Highland Park Residence</span></div>
+    </div>
+    <div class="gi" data-cat="commercial">
+      <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&q=80" alt="Luxury hotel lobby" loading="lazy">
+      <div class="gi-overlay"><span class="gi-label">Hotel Lobby &mdash; Uptown</span></div>
+    </div>
+    <div class="gi" data-cat="residential">
+      <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80" alt="Master bedroom wall finish" loading="lazy">
+      <div class="gi-overlay"><span class="gi-label">Preston Hollow Suite</span></div>
+    </div>
+    <div class="gi" data-cat="commercial">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&q=80" alt="Office marmorino finish" loading="lazy">
+      <div class="gi-overlay"><span class="gi-label">Corporate HQ &mdash; Legacy West</span></div>
+    </div>
+    <div class="gi" data-cat="residential">
+      <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=700&q=80" alt="Dining room venetian plaster" loading="lazy">
+      <div class="gi-overlay"><span class="gi-label">University Park Dining</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="numbar reveal">
+  <div class="num-grid">
+    <div><div class="num-val">15+</div><div class="num-lbl">Years of Craft</div></div>
+    <div><div class="num-val">400+</div><div class="num-lbl">Projects Done</div></div>
+    <div><div class="num-val">100%</div><div class="num-lbl">Italian Technique</div></div>
+    <div><div class="num-val">DFW</div><div class="num-lbl">Dallas &amp; Area</div></div>
+  </div>
+</div>
+
+<section class="process" id="process">
+  <div style="text-align:center">
+    <div class="stag reveal" style="justify-content:center">How We Work</div>
+    <h2 class="stitle reveal" style="text-align:center">A Seamless<br><em>Experience</em></h2>
+    <p class="sdesc reveal" style="margin:0 auto;text-align:center">From first call to final reveal &mdash; guided with care at every step.</p>
+  </div>
+  <div class="proc-steps">
+    <div class="proc-step reveal"><div class="pdot">I</div><h3 class="ptitle">Free Consultation</h3><p class="pdesc">We visit your space, understand your vision, discuss finishes and timeline. No pressure.</p></div>
+    <div class="proc-step reveal rd1"><div class="pdot">II</div><h3 class="ptitle">Custom Sample</h3><p class="pdesc">Our artisans apply a hand-crafted sample on your actual wall before we begin the full project.</p></div>
+    <div class="proc-step reveal rd2"><div class="pdot">III</div><h3 class="ptitle">Expert Application</h3><p class="pdesc">Clean, precise, respectful of your home &mdash; layering plaster to absolute perfection.</p></div>
+    <div class="proc-step reveal rd3"><div class="pdot">IV</div><h3 class="ptitle">Final Reveal</h3><p class="pdesc">We don't leave until you're completely satisfied with your transformed space.</p></div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div style="text-align:center">
+    <div class="stag reveal" style="justify-content:center">Client Stories</div>
+    <h2 class="stitle reveal" style="text-align:center">What Our<br><em>Clients Say</em></h2>
+  </div>
+  <div class="tgrid">
+    <div class="tcard reveal"><div class="qmark">"</div><p class="ttext">"I've renovated three homes in Dallas and nothing has elevated a space the way Dallas Venetian Co. transformed my master bedroom. It's the first thing every guest notices."</p><div class="tauthor"><div class="tavatar">SL</div><div><div class="tname">Sarah L.</div><div class="tproject">Residential &mdash; Highland Park</div></div></div></div>
+    <div class="tcard reveal rd1"><div class="qmark">"</div><p class="ttext">"We hired them for our restaurant walls. The reaction from customers is incredible &mdash; people stop and touch the walls. That's real craftsmanship."</p><div class="tauthor"><div class="tavatar">MR</div><div><div class="tname">Marco R.</div><div class="tproject">Commercial &mdash; Uptown Restaurant</div></div></div></div>
+    <div class="tcard reveal rd2"><div class="qmark">"</div><p class="ttext">"Professional, clean, and absolutely stunning. The marmorino finish in our lobby cost less than wallpaper &mdash; and it will outlast the building."</p><div class="tauthor"><div class="tavatar">JT</div><div><div class="tname">James T.</div><div class="tproject">Commercial &mdash; Corporate Office, Plano</div></div></div></div>
+  </div>
+</section>
+
+<div class="contact-wrap" id="contact">
+  <div class="cleft">
+    <div class="cleft-inner">
+      <div class="stag" style="margin-bottom:14px">Get in Touch</div>
+      <h2 class="stitle" style="font-size:clamp(28px,3vw,40px)">Ready to Transform<br><em>Your Space?</em></h2>
+      <a href="tel:2144352651" class="cphone">214-435-2651</a>
+      <div class="cdet">Dallas, TX &amp; Surrounding Areas</div>
+      <div class="cdet">Free Consultations Available</div>
+      <div class="cdet">Residential &amp; Commercial Projects</div>
+      <a href="tel:2144352651" class="btn-gold" style="margin-top:28px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--black)"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        Call Us Now
+      </a>
+    </div>
+  </div>
+  <div class="cright">
+    <div class="stag">Send a Message</div>
+    <h3 style="font-family:var(--serif);font-size:28px;font-weight:300;color:var(--white);margin:10px 0 0">Tell Us About<br><em style="color:var(--gold)">Your Project</em></h3>
+    <form class="cform" name="contact" method="POST" data-netlify="true" onsubmit="handleForm(event)"><input type="hidden" name="form-name" value="contact"><input type="hidden" name="subject" value="New Lead from Dallas Venetian Co. - %{submissionId}">
+      <div class="frow">
+        <div class="fgroup"><label>Full Name</label><input type="text" name="name" placeholder="John Smith"></div>
+        <div class="fgroup"><label>Phone Number</label><input type="tel" name="phone" placeholder="(214) 000-0000"></div>
+      </div>
+      <div class="fgroup"><label>Email (optional)</label><input type="email" name="email" placeholder="john@email.com"></div><div class="fgroup"><label>Project Type</label>
+        <select name="service"><option value="" disabled selected>Select a service</option><option>Venetian Plaster Classic</option><option>Marmorino Finish</option><option>Custom Texture</option><option>Not Sure Yet</option></select>
+      </div>
+      <div class="fgroup"><label>Message</label><textarea name="message" placeholder="Tell us about your space, timeline, and vision..."></textarea></div>
+      <button type="submit" class="btn-submit">Send Message &#8594;</button>
+    </form>
+  </div>
+</div>
+
+<footer>
+  <div class="ft">
+    <div class="flogo">Dallas Venetian <span>Co.</span></div>
+    <p class="ftag">Italian Craft &middot; Dallas Excellence</p>
+    <ul class="fnav">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <div class="fb">
+    <span class="fcopy">&copy; 2026 Dallas Venetian Co. All rights reserved.</span>
+    <span class="fsvc">Serving Dallas &middot; Frisco &middot; Plano &middot; Highland Park &middot; Uptown</span>
+  </div>
+</footer>
+
+<div class="mobile-sticky">
+  <a href="tel:2144352651" class="msb-call">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="var(--black)"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    Call Us Now
+  </a>
+  <a href="https://wa.me/12144352651" target="_blank" class="msb-wa">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    WhatsApp
+  </a>
+</div>
+
+<div class="chat-bubble" id="chatBubble" onclick="toggleChat()">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--black)"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+  <div class="chat-dot"></div>
+</div>
+
+<div class="chat-window" id="chatWindow">
+  <div class="chat-head">
+    <div class="chat-avatar">V</div>
+    <div>
+      <div class="chat-title">Dallas Venetian Co.</div>
+      <div class="chat-status">Online now</div>
+    </div>
+    <button class="chat-close" onclick="toggleChat()">&#x2715;</button>
+  </div>
+  <div class="chat-msgs" id="chatMsgs">
+    <div class="cmsg bot">&#128075; Welcome to <strong>Dallas Venetian Co.</strong>! I'm here to help you transform your space.<br><br>What can I assist you with today?</div>
+  </div>
+  <div class="chat-quick" id="quickBtns">
+    <button class="qbtn" onclick="quickReply('Get a free quote')">Free Quote</button>
+    <button class="qbtn" onclick="quickReply('Pricing info')">Pricing</button>
+    <button class="qbtn" onclick="quickReply('Service area')">Service Area</button>
+    <button class="qbtn" onclick="quickReply('What is Venetian Plaster')">What is it?</button>
+  </div>
+  <div class="chat-input-row">
+    <input class="chat-input" id="chatInput" type="text" placeholder="Type a message..." onkeydown="if(event.key==='Enter')sendChat()">
+    <button class="chat-send" onclick="sendChat()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--black)"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+const nav=document.getElementById('navbar');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>60));
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+function filterGal(cat,btn){
+  document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');
+  document.querySelectorAll('.gi').forEach(i=>{i.style.opacity=(cat==='all'||i.dataset.cat===cat)?'1':'0.15';i.style.transition='opacity 0.4s';});
+}
+function handleForm(e){
+  e.preventDefault();
+  const form=e.target;
+  const b=form.querySelector('.btn-submit');
+  b.textContent='Sending...';b.disabled=true;
+  fetch('/',{
+    method:'POST',
+    headers:{'Content-Type':'application/x-www-form-urlencoded'},
+    body:new URLSearchParams(new FormData(form)).toString()
+  })
+  .then(()=>{
+    b.textContent='Message Sent ✓';b.style.background='#2d5a2d';b.style.color='#fff';b.disabled=false;
+    form.reset();
+    setTimeout(()=>{b.textContent='Send Message →';b.style.background='';b.style.color='';},4000);
+  })
+  .catch(err=>{
+    console.log('Form error:',err);
+    b.textContent='Error - Try Again';b.style.background='#8b0000';b.style.color='#fff';b.disabled=false;
+  });
+}
+const chatHistory=[];
+function toggleChat(){document.getElementById('chatWindow').classList.toggle('open');}
+function addMsg(t,r){const m=document.getElementById('chatMsgs'),d=document.createElement('div');d.className='cmsg '+r;d.innerHTML=t;m.appendChild(d);m.scrollTop=m.scrollHeight;}
+function showTyping(){const m=document.getElementById('chatMsgs'),d=document.createElement('div');d.className='cmsg bot typing';d.id='typing';d.innerHTML='<div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div>';m.appendChild(d);m.scrollTop=m.scrollHeight;}
+function hideTyping(){const t=document.getElementById('typing');if(t)t.remove();}
+async function botRespond(txt){
+  showTyping();
+  try{
+    const res=await fetch('/.netlify/functions/chat',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({message:txt,history:chatHistory})
+    });
+    const data=await res.json();
+    hideTyping();
+    const reply=data.reply||"Thanks for reaching out! Please call us at 214-435-2651.";
+    chatHistory.push({role:'user',text:txt});
+    chatHistory.push({role:'bot',text:reply});
+    if(chatHistory.length>20)chatHistory.splice(0,2);
+    addMsg(reply,'bot');
+  }catch(err){
+    hideTyping();
+    addMsg('Thanks for your message! For fastest assistance please call us at <a href="tel:2144352651" style="color:var(--gold);font-weight:600">214-435-2651</a>.','bot');
+  }
+}
+function quickReply(t){document.getElementById('quickBtns').style.display='none';addMsg(t,'user');botRespond(t);}
+function sendChat(){const i=document.getElementById('chatInput'),t=i.value.trim();if(!t)return;addMsg(t,'user');i.value='';document.getElementById('quickBtns').style.display='none';botRespond(t);}
+</script>
+</body>
+</html>
